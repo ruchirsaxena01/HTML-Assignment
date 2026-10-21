@@ -2,6 +2,11 @@
 
 **Student Name:** Ruchir Saxena  
 **Email:** [saxenaruchir282@gmail.com](mailto:saxenaruchir282@gmail.com)  
+**Phone:** [+91 7417035716](tel:+917417035716)  
+**LinkedIn:** [linkedin.com/in/ruchir-saxena-44b323423](https://www.linkedin.com/in/ruchir-saxena-44b323423)  
+**GitHub:** [github.com/ruchirsaxena01](https://github.com/ruchirsaxena01?tab=repositories)  
+**LeetCode:** [leetcode.com/u/ruchir01](https://leetcode.com/u/ruchir01/)  
+**Academic Record:** Class X: 82.0% | Class XII: 69.2%  
 **Program:** Bachelor of Computer Applications (Artificial Intelligence) – Session 2026–2029  
 **Institution:** Faculty of Computer Applications, Invertis University, Bareilly (U.P.)  
 **Subject:** BCAICC104: HTML & CSS (Theory) & BCAICC154: HTML & CSS Lab  
