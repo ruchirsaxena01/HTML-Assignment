@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSS Selector Types and Demonstrations – Ruchir Saxena">
+  <title>CSS Selector Showcase – Ruchir Saxena</title>
+  <style>
+    /* 1. Element Selector */
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.5;
+      background: #f8fafc;
+      color: #334155;
+      max-width: 760px;
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+    }
+
+    /* 2. Class Selector */
+    .showcase-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* 3. ID Selector */
+    #main-title {
+      color: #0f172a;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 0.5rem;
+    }
+
+    /* 4. Descendant Selector (any p inside .showcase-card) */
+    .showcase-card p {
+      color: #475569;
+    }
+
+    /* 5. Child Combinator Selector (direct child li of .target-list) */
+    .target-list > li {
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    /* 6. Adjacent Sibling Selector (p immediately following an h3) */
+    h3 + p {
+      font-style: italic;
+      color: #2563eb;
+    }
+
+    /* 7. Attribute Selector */
+    input[type="text"] {
+      padding: 0.5rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* 8. Pseudo-classes */
+    .btn-sample:hover {
+      background-color: #1d4ed8;
+      cursor: pointer;
+    }
+
+    .target-list li:first-child {
+      color: #16a34a;
+    }
+
+    .zebra-table tr:nth-child(even) {
+      background-color: #f1f5f9;
+    }
+
+    /* Button base */
+    .btn-sample {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 id="main-title">CSS Selector Types Showcase</h1>
+    <p>Comprehensive demonstration of CSS selectors for HTML &amp; CSS Lab by <strong>Ruchir Saxena</strong>.</p>
+  </header>
+
+  <main>
+    <section class="showcase-card">
+      <h2>1. Combinators &amp; Hierarchy</h2>
+      <h3>Adjacent Sibling Demonstration (h3 + p)</h3>
+      <p>This paragraph immediately follows the h3 element, triggering the adjacent sibling selector (styled in italic blue).</p>
+      <p>This second paragraph is a general sibling, so it remains in standard body styling.</p>
+
+      <h3>Direct Child List (.target-list &gt; li)</h3>
+      <ul class="target-list">
+        <li>First child item (styled green via :first-child)</li>
+        <li>Second child item</li>
+        <li>Third child item with a nested sub-item:
+          <ul>
+            <li style="font-weight: normal;">Nested item (not a direct child, so font-weight is normal)</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="showcase-card">
+      <h2>2. Attribute &amp; Pseudo-Class Selectors</h2>
+      <p>Attribute Selector matching <code>input[type="text"]</code>:</p>
+      <input type="text" placeholder="Type here to test attribute styling...">
+
+      <p style="margin-top: 1rem;">Pseudo-class <code>:hover</code> on button:</p>
+      <button class="btn-sample">Hover Over Me</button>
+
+      <h3 style="margin-top: 1.5rem;">Zebra Striping via :nth-child(even)</h3>
+      <table class="zebra-table" border="1" cellpadding="6" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+        <tr><td>Row 1: HTML5 Semantics</td><td>Status: Complete</td></tr>
+        <tr><td>Row 2: CSS Selectors</td><td>Status: Active</td></tr>
+        <tr><td>Row 3: Flexbox Layouts</td><td>Status: Upcoming</td></tr>
+        <tr><td>Row 4: CSS Grid</td><td>Status: Upcoming</td></tr>
+      </table>
+    </section>
+  </main>
+
+  <footer style="text-align: center; color: #94a3b8; font-size: 0.85rem;">
+    <p>&copy; 2026 Ruchir Saxena · Invertis University, Bareilly</p>
+  </footer>
+</body>
+
+</html>

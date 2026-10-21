@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Grid and Flexbox Hybrid Landing Page – Ruchir Saxena">
+  <title>CodeBareilly – Grid + Flexbox Landing</title>
+  <style>
+    /* RULE OF THUMB: CSS Grid for 2D page architecture · Flexbox for 1D component layout */
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #2563eb;
+      --dark: #0f172a;
+      --bg: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      color: #334155;
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    /* GRID: Macro Page Layout */
+    .page-grid {
+      display: grid;
+      grid-template-rows: auto auto auto auto;
+      min-height: 100vh;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      width: 100%;
+    }
+
+    /* FLEXBOX: Header & Navbar */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .nav-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: #64748b;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* FLEXBOX: Hero Content */
+    .hero {
+      padding: 4rem 0;
+    }
+
+    .hero-flex {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 2.75rem;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      padding: 0.75rem 1.75rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn-blue {
+      background: var(--secondary);
+      color: #ffffff;
+    }
+
+    .hero-img {
+      flex: 1;
+    }
+
+    .hero-img img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+
+    /* GRID: 3-Column Features Section */
+    .features-section {
+      background: #ffffff;
+      padding: 4rem 0;
+      border-top: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-item {
+      padding: 1.5rem;
+      border-radius: 8px;
+      background: var(--bg);
+      border: 1px solid #e2e8f0;
+    }
+
+    footer {
+      background: var(--dark);
+      color: #94a3b8;
+      padding: 2.5rem 0;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-flex {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-grid">
+    <header>
+      <div class="wrap nav-flex">
+        <div class="logo">CodeBareilly</div>
+        <ul class="nav-menu">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Workshops</a></li>
+        </ul>
+        <a href="mailto:saxenaruchir282@gmail.com" class="btn btn-blue" style="padding: 0.5rem 1.25rem;">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="wrap hero">
+        <div class="hero-flex">
+          <div class="hero-text">
+            <h1>Connecting Tech Minds Across Bareilly</h1>
+            <p>A regional developer initiative founded by Invertis University computer applications students. Sharing front-end workflows, Java algorithms, and AI projects.</p>
+            <div class="hero-buttons">
+              <a href="#" class="btn btn-blue">Join Community</a>
+              <a href="#" class="btn" style="background:#e2e8f0; color:#1e293b;">Explore Projects</a>
+            </div>
+          </div>
+          <div class="hero-img">
+            <img src="https://picsum.photos/id/1018/600/400" alt="Students coding together">
+          </div>
+        </div>
+      </section>
+
+      <section class="features-section">
+        <div class="wrap">
+          <div class="features-grid">
+            <div class="feature-item">
+              <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Web Development</h3>
+              <p>Weekly peer reviews on semantic HTML, CSS Grid architectures, and responsive interfaces.</p>
+            </div>
+            <div class="feature-item">
+              <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Java Programming</h3>
+              <p>Mastering core object-oriented software engineering, data structures, and CLI tools.</p>
+            </div>
+            <div class="feature-item">
+              <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Applied AI</h3>
+              <p>Practical workshops breaking down machine learning algorithms and intelligent data workflows.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Ruchir Saxena · Invertis University, Bareilly</p>
+    </footer>
+  </div>
+</body>
+
+</html>

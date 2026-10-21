@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dashboard with Named CSS Grid Areas – Ruchir Saxena">
+  <title>Student Dashboard – Named Grid Areas</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Named Grid Layout */
+    .dashboard-layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-areas:
+        "header  header"
+        "sidebar stats"
+        "sidebar main"
+        "footer  footer";
+      min-height: 100vh;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    header.dash-header {
+      grid-area: header;
+      background: #1e3a8a;
+      color: #ffffff;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    aside.dash-sidebar {
+      grid-area: sidebar;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      border: 1px solid #e2e8f0;
+    }
+
+    .dash-sidebar ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .dash-sidebar li {
+      margin-bottom: 0.75rem;
+    }
+
+    .dash-sidebar a {
+      color: #475569;
+      text-decoration: none;
+      font-weight: 600;
+      display: block;
+      padding: 0.4rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    .dash-sidebar a.active {
+      background: #eff6ff;
+      color: #1e3a8a;
+    }
+
+    section.dash-stats {
+      grid-area: stats;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .stat-card {
+      background: #ffffff;
+      padding: 1.25rem;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
+
+    .stat-val {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #1e3a8a;
+    }
+
+    main.dash-main {
+      grid-area: main;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      border: 1px solid #e2e8f0;
+    }
+
+    footer.dash-footer {
+      grid-area: footer;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.85rem;
+      padding: 0.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      border: 1px solid #e2e8f0;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #f8fafc;
+    }
+
+    @media (max-width: 768px) {
+      .dashboard-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "stats"
+          "sidebar"
+          "main"
+          "footer";
+      }
+      section.dash-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dashboard-layout">
+    <header class="dash-header">
+      <div>
+        <h2>Invertis Student Dashboard</h2>
+        <small>Faculty of Computer Applications · BCA (AI)</small>
+      </div>
+      <div>
+        <strong>Ruchir Saxena</strong>
+      </div>
+    </header>
+
+    <aside class="dash-sidebar">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="#" class="active">Overview</a></li>
+        <li><a href="#">Course Modules</a></li>
+        <li><a href="#">Lab Submissions</a></li>
+        <li><a href="#">Attendance Record</a></li>
+      </ul>
+    </aside>
+
+    <section class="dash-stats">
+      <div class="stat-card">
+        <div class="stat-val">22</div>
+        <div>Current Credits (Sem I)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">45 / 45</div>
+        <div>HTML &amp; CSS Labs Done</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">94%</div>
+        <div>Attendance</div>
+      </div>
+    </section>
+
+    <main class="dash-main">
+      <h3>Active Course Modules (Semester I)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Title</th>
+            <th>Credits</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>BCAICC104</td>
+            <td>HTML &amp; CSS Theory</td>
+            <td>4</td>
+            <td>In Progress</td>
+          </tr>
+          <tr>
+            <td>BCAICC154</td>
+            <td>HTML &amp; CSS Practical Lab</td>
+            <td>2</td>
+            <td>Active</td>
+          </tr>
+          <tr>
+            <td>BCAICC103</td>
+            <td>Programming in Java</td>
+            <td>4</td>
+            <td>In Progress</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <footer class="dash-footer">
+      <p>&copy; 2026 Ruchir Saxena · Invertis University, Bareilly</p>
+    </footer>
+  </div>
+</body>
+
+</html>

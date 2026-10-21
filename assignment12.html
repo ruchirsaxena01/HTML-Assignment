@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Accessible Images Showcase with Alt Attributes and Figures – Ruchir Saxena">
+  <title>Accessible Images Showcase – Ruchir Saxena</title>
+</head>
+
+<body>
+  <header>
+    <h1>Accessible Images &amp; Figures Showcase</h1>
+    <p>Created by Ruchir Saxena · BCA (Artificial Intelligence), Invertis University</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. Student Profile Image</h2>
+      <!-- Meaningful alt text describing the person and context -->
+      <img src="https://picsum.photos/id/1005/260/260" width="130" height="130"
+           alt="Portrait of student Ruchir Saxena smiling outdoors in front of college campus">
+      <p>Profile photo formatted with explicit width and height dimensions to prevent Cumulative Layout Shift (CLS).</p>
+    </section>
+
+    <section>
+      <h2>2. Project Figures with Captions</h2>
+      <!-- Semantic figure with figcaption -->
+      <figure>
+        <img src="https://picsum.photos/id/0/480/280" width="480" height="280"
+             alt="Laptop computer open on a wooden desk displaying source code in an editor">
+        <figcaption>Figure 1: Front-end development environment configured in VS Code.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://picsum.photos/id/60/480/280" width="480" height="280"
+             alt="Close-up of a desktop workstation with code, coffee cup and notebook">
+        <figcaption>Figure 2: Daily coding lab sessions for Java and web assignments.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>3. Decorative Background Banner</h2>
+      <!-- Decorative image: empty alt attribute ensures screen readers ignore it -->
+      <img src="https://picsum.photos/id/1015/700/120" width="700" height="120" alt="">
+      <p><em>(The banner above is decorative, so it has an empty alt="" attribute for screen reader accessibility.)</em></p>
+    </section>
+
+    <section>
+      <h2>4. Linked Icon Image</h2>
+      <!-- Linked image describes the destination and action -->
+      <a href="https://github.com/ruchirsaxena01" target="_blank" rel="noopener noreferrer">
+        <img src="https://picsum.photos/id/1062/80/80" width="80" height="80" alt="Visit Ruchir Saxena's GitHub profile (opens in new tab)">
+      </a>
+      <p>Click the badge above to visit my GitHub profile.</p>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <!-- Accessibility Checklist -->
+    <h3>Image Accessibility Rules Followed:</h3>
+    <ul>
+      <li>✔ Informative images have descriptive, non-redundant alt text.</li>
+      <li>✔ Alt text avoids unnecessary phrases like "image of" or "photo of".</li>
+      <li>✔ Decorative images use <code>alt=""</code>.</li>
+      <li>✔ Linked images explain the link destination.</li>
+    </ul>
+    <p><small>&copy; 2026 Ruchir Saxena</small></p>
+  </footer>
+</body>
+
+</html>

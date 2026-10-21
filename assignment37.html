@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSS Grid Auto-Fit Reflowing Product Grid – Ruchir Saxena">
+  <title>Auto-Fit CSS Grid Catalog – Ruchir Saxena</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      padding: 2.5rem 1.5rem;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+    }
+
+    /* CSS Grid Auto-Fit */
+    .auto-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .course-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #0284c7;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+
+    .card-body h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+      color: #0f172a;
+    }
+
+    .card-body p {
+      font-size: 0.9rem;
+      color: #64748b;
+      flex-grow: 1;
+      margin-bottom: 1rem;
+    }
+
+    .btn-card {
+      background: #0284c7;
+      color: #ffffff;
+      text-align: center;
+      padding: 0.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>BCA (AI) Semester I Modules</h1>
+      <p>Self-adjusting grid powered by <code>repeat(auto-fit, minmax(250px, 1fr))</code> · <strong>Ruchir Saxena</strong></p>
+    </header>
+
+    <main class="auto-grid">
+      <article class="course-card">
+        <img src="https://picsum.photos/id/0/400/200" alt="Code editor">
+        <div class="card-body">
+          <span class="tag">BCAICC104</span>
+          <h3>HTML &amp; CSS</h3>
+          <p>Semantic markup, document structure, accessible navigation, and responsive CSS techniques.</p>
+          <a href="#" class="btn-card">Open Syllabus</a>
+        </div>
+      </article>
+
+      <article class="course-card">
+        <img src="https://picsum.photos/id/24/400/200" alt="Java textbook">
+        <div class="card-body">
+          <span class="tag">BCAICC103</span>
+          <h3>Programming in Java</h3>
+          <p>Core object-oriented paradigms, classes, inheritance, polymorphism, and algorithms.</p>
+          <a href="#" class="btn-card">Open Syllabus</a>
+        </div>
+      </article>
+
+      <article class="course-card">
+        <img src="https://picsum.photos/id/119/400/200" alt="Math notes">
+        <div class="card-body">
+          <span class="tag">BCAICC102</span>
+          <h3>Theory of Mathematics</h3>
+          <p>Discrete mathematics, set theory, propositional logic, and computational relations.</p>
+          <a href="#" class="btn-card">Open Syllabus</a>
+        </div>
+      </article>
+
+      <article class="course-card">
+        <img src="https://picsum.photos/id/180/400/200" alt="Data analytics graphs">
+        <div class="card-body">
+          <span class="tag">IIOT1AC</span>
+          <h3>Data Analytics</h3>
+          <p>Foundations of statistical analysis, exploratory data analysis, and dashboard generation.</p>
+          <a href="#" class="btn-card">Open Syllabus</a>
+        </div>
+      </article>
+    </main>
+
+    <footer style="margin-top: 3rem; text-align: center; color: #94a3b8; font-size: 0.85rem;">
+      <p>&copy; 2026 Ruchir Saxena · Invertis University, Bareilly</p>
+    </footer>
+  </div>
+</body>
+
+</html>

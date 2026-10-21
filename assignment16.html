@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Invertis University Student Workshop Registration Form – Ruchir Saxena">
+  <title>Student Registration – Invertis University</title>
+</head>
+
+<body>
+  <header>
+    <h1>Invertis University – Coding Workshop Registration</h1>
+    <p>Faculty of Computer Applications · Session 2026–2029</p>
+  </header>
+
+  <main>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <p>
+          <label for="fullname">Full Name:</label><br>
+          <input type="text" id="fullname" name="fullname" required placeholder="e.g. Ruchir Saxena">
+        </p>
+
+        <p>
+          <label for="email">University / Personal Email:</label><br>
+          <input type="email" id="email" name="email" required placeholder="e.g. saxenaruchir282@gmail.com">
+        </p>
+
+        <p>
+          <label for="phone">Contact Number (10 Digits):</label><br>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="9876543210" required>
+        </p>
+
+        <p>
+          <label for="dob">Date of Birth:</label><br>
+          <input type="date" id="dob" name="dob" required>
+        </p>
+
+        <p>
+          <label for="password">Create Portal Password (min 8 characters):</label><br>
+          <input type="password" id="password" name="password" minlength="8" required>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Academic Profile</legend>
+
+        <p>
+          <label for="course">Current Academic Program:</label><br>
+          <select id="course" name="course" required>
+            <option value="">-- Choose Course --</option>
+            <option value="bca-ai" selected>BCA (Artificial Intelligence)</option>
+            <option value="bca-gen">BCA (General)</option>
+            <option value="bsc-it">B.Sc. Information Technology</option>
+            <option value="btech-cse">B.Tech Computer Science</option>
+            <option value="mca">MCA</option>
+          </select>
+        </p>
+
+        <p>
+          <strong>Gender:</strong><br>
+          <label><input type="radio" name="gender" value="male" checked> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+          <label><input type="radio" name="gender" value="other"> Other</label>
+        </p>
+
+        <p>
+          <strong>Interested Workshop Topics (Select all that apply):</strong><br>
+          <label><input type="checkbox" name="topics" value="web-dev" checked> HTML5 &amp; Modern CSS</label><br>
+          <label><input type="checkbox" name="topics" value="java" checked> Java OOP &amp; Problem Solving</label><br>
+          <label><input type="checkbox" name="topics" value="ai"> Machine Learning &amp; Data Analytics</label><br>
+          <label><input type="checkbox" name="topics" value="git"> Git &amp; GitHub Collaborative Workflows</label>
+        </p>
+      </fieldset>
+
+      <p>
+        <label>
+          <input type="checkbox" name="terms" required>
+          I confirm that all details provided are accurate and I will adhere to the university lab code of conduct.
+        </label>
+      </p>
+
+      <p>
+        <button type="submit">Submit Registration</button>
+        <button type="reset">Reset Form</button>
+      </p>
+    </form>
+  </main>
+
+  <footer>
+    <hr>
+    <p><small>&copy; 2026 Faculty of Computer Applications · Invertis University, Bareilly</small></p>
+  </footer>
+</body>
+
+</html>

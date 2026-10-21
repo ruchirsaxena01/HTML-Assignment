@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Debugged HTML Assignment – Code audit and correction by Ruchir Saxena">
+  <title>Debugged Page – Ruchir Saxena</title>
+</head>
+
+<body>
+  <!--
+  AUDIT OF ORIGINAL CODE DEFECTS & CORRECTIONS:
+  1. Missing <!DOCTYPE html> declaration at the start of the document.
+  2. Missing 'lang="en"' attribute on the <html> root element.
+  3. Missing <meta charset="UTF-8"> inside <head> causing encoding issues.
+  4. <title> tag was opened but never closed properly.
+  5. Mismatched heading tag: <h1> opened but closed with </h2>. Corrected to <h1></h1>.
+  6. Improperly nested tags: <b>cricket and <i>music</b></i>. Must close in reverse order: <i> first, then <b>.
+  7. <img> lacked mandatory 'alt' attribute and explicit dimensions. Added alt and dimensions.
+  8. <a> href attribute value lacked quotation marks and protocol: 'href=google.com' -> 'href="https://www.google.com"'.
+  9. Unclosed <ul> list element; stray <ol> opened instead. Fixed to properly enclose <li> items.
+  10. <li> items omitted closing </li> tags. Added proper closing tags.
+  11. Table lacked <thead> and <tbody> semantic wrappers; table cells omitted </td> closing tags.
+  12. Stray </div> tag closed without any opening <div> container. Replaced with proper <p> element.
+  -->
+
+  <header>
+    <h1>My Interests &amp; Hobbies</h1>
+    <p>Welcome! Here is my corrected, W3C standards-compliant HTML page.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Personal Hobbies</h2>
+      <p>In my spare time, I enjoy <b>cricket and <i>listening to music</i></b>.</p>
+      <img src="https://picsum.photos/id/1025/300/200" alt="A friendly dog resting in a blanket" width="300" height="200">
+      <p>Learn more about search engines on <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a>.</p>
+    </section>
+
+    <section>
+      <h2>Daily Activities</h2>
+      <ul>
+        <li>Reading technical books and blogs</li>
+        <li>Practicing Java programming problems</li>
+        <li>Building HTML &amp; CSS web layouts</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Student Details Table</h2>
+      <table border="1" cellpadding="6">
+        <thead>
+          <tr>
+            <th scope="col">Student Name</th>
+            <th scope="col">Course</th>
+            <th scope="col">City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ruchir Saxena</td>
+            <td>BCA (AI)</td>
+            <td>Bareilly</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>Page audited and debugged successfully by Ruchir Saxena.</p>
+  </footer>
+</body>
+
+</html>

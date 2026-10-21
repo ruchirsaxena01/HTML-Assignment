@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flexbox Navigation Menu Bar – Ruchir Saxena">
+  <title>Flexbox Menu Bar – Ruchir Saxena</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    /* Flexbox Navigation Header */
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .brand-logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #1a365d;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .brand-logo span {
+      color: #319795;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #475569;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #1a365d;
+    }
+
+    .btn-action {
+      background: #319795;
+      color: #ffffff;
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background-color 0.2s;
+    }
+
+    .btn-action:hover {
+      background: #285e61;
+    }
+
+    .page-content {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .page-content h1 {
+      color: #1a365d;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">Invertis<span>Tech</span></a>
+
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Curriculum</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Lab Guides</a></li>
+      </ul>
+
+      <a href="mailto:saxenaruchir282@gmail.com" class="btn-action">Student Portal</a>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <h1>Flexbox Menu Bar Demonstration</h1>
+    <p>This navigation bar leverages Flexbox alignment utilities:</p>
+    <ul style="margin: 1rem 0 1rem 1.5rem;">
+      <li><code>display: flex;</code> with <code>justify-content: space-between;</code> distributes the logo, menu links, and action button cleanly.</li>
+      <li><code>align-items: center;</code> vertically centers all items across different font sizes and button heights.</li>
+      <li><code>gap: 1.5rem;</code> provides consistent spacing between list elements without fragile margin hacks.</li>
+    </ul>
+    <p>Author: <strong>Ruchir Saxena</strong> · BCA (Artificial Intelligence), Invertis University, Bareilly</p>
+  </main>
+
+  <footer style="text-align: center; color: #94a3b8; font-size: 0.85rem; padding: 2rem;">
+    <p>&copy; 2026 Ruchir Saxena · Invertis University</p>
+  </footer>
+</body>
+
+</html>

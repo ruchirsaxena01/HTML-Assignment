@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fixing Common CSS Overflow Problems – Ruchir Saxena">
+  <title>Fixing CSS Overflow Problems – Ruchir Saxena</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      background: #f8fafc;
+      color: #334155;
+      max-width: 760px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      color: #0f172a;
+      border-bottom: 2px solid #cbd5e1;
+      padding-bottom: 0.5rem;
+    }
+
+    .demo-box {
+      background: #ffffff;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .fixed-width-container {
+      width: 280px;
+      border: 2px solid #ef4444;
+      padding: 10px;
+      background: #fef2f2;
+      margin-bottom: 1rem;
+    }
+
+    /* Fixed URL break */
+    .fixed-url {
+      overflow-wrap: break-word;
+      word-break: break-all;
+    }
+
+    /* Fixed ellipsis */
+    .ellipsis-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Responsive Table Container */
+    .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 500px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #e2e8f0;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #f1f5f9;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Fixing CSS Overflow Problems</h1>
+    <p>Practical solutions for common text, layout, and table overflows · <strong>Ruchir Saxena</strong></p>
+  </header>
+
+  <main>
+    <!-- Scenario 1: Long URL Break -->
+    <section class="demo-box">
+      <h2>1. Long Unbroken String / URL Overflow</h2>
+      <p><strong>Fixed with:</strong> <code>overflow-wrap: break-word; word-break: break-all;</code></p>
+      <div class="fixed-width-container">
+        <p class="fixed-url">
+          https://www.invertisuniversity.ac.in/faculty-of-computer-applications/bachelor-of-computer-applications-artificial-intelligence-curriculum-overview
+        </p>
+      </div>
+      <p><small>The URL wraps neatly within the 280px container without protruding outside the red border.</small></p>
+    </section>
+
+    <!-- Scenario 2: Truncating with Ellipsis -->
+    <section class="demo-box">
+      <h2>2. Single-Line Text Truncation</h2>
+      <p><strong>Fixed with:</strong> <code>white-space: nowrap; overflow: hidden; text-overflow: ellipsis;</code></p>
+      <div class="fixed-width-container">
+        <p class="ellipsis-text">
+          BCAICC104 – Comprehensive Web Application Design and Semantic HTML5 Standards
+        </p>
+      </div>
+      <p><small>Excess text terminates gracefully with three dots (...).</small></p>
+    </section>
+
+    <!-- Scenario 3: Horizontal Table Overflow -->
+    <section class="demo-box">
+      <h2>3. Wide Table Overflow on Small Viewports</h2>
+      <p><strong>Fixed with:</strong> Wrapping <code>&lt;table&gt;</code> in a container styled with <code>overflow-x: auto;</code></p>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Name</th>
+              <th>Credits</th>
+              <th>Continuous Assessment</th>
+              <th>End Semester Exam</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>BCAICC104</td>
+              <td>HTML &amp; CSS</td>
+              <td>4</td>
+              <td>30 Marks</td>
+              <td>70 Marks</td>
+            </tr>
+            <tr>
+              <td>BCAICC103</td>
+              <td>Programming in JAVA</td>
+              <td>4</td>
+              <td>30 Marks</td>
+              <td>70 Marks</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p><small>The table scrolls horizontally on small screens without breaking the outer page layout.</small></p>
+    </section>
+  </main>
+
+  <footer style="text-align: center; color: #94a3b8; font-size: 0.85rem;">
+    <p>&copy; 2026 Ruchir Saxena · Invertis University, Bareilly</p>
+  </footer>
+</body>
+
+</html>

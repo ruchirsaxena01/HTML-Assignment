@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pure HTML Multi-Page Tabbed Website – Ruchir Saxena, Invertis University">
+  <title>Ruchir's Campus Hub – Multi-Page Project</title>
+  <style>
+    /* Pure HTML tab simulation using CSS :target */
+    .page-section {
+      display: none;
+    }
+    .page-section:target,
+    body:not(:has(.page-section:target)) #home {
+      display: block;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      color: #1a202c;
+      line-height: 1.6;
+    }
+    nav a {
+      margin-right: 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      color: #2b6cb0;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    header {
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Ruchir's Academic &amp; Tech Hub</h1>
+    <nav aria-label="Main Navigation">
+      <a href="#home">Home</a> |
+      <a href="#about">About</a> |
+      <a href="#academics">Curriculum</a> |
+      <a href="#workshop">Registration</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PAGE 1: HOME -->
+    <section id="home" class="page-section">
+      <h2>Welcome to My Coursework Hub</h2>
+      <p>This multi-page site showcases the synthesis of HTML5 elements learned during the initial four weeks of the semester: semantic layouts, structured tables, accessible image media, and input forms.</p>
+      <img src="https://picsum.photos/id/180/700/280" width="700" height="280" style="max-width: 100%; height: auto;" alt="Workspace setup with laptop and study notes">
+      <h3>Quick Links</h3>
+      <ul>
+        <li>Read <a href="#about">about my background and skills</a></li>
+        <li>Review our <a href="#academics">BCA (AI) Semester I roadmap</a></li>
+        <li>Sign up for our student <a href="#workshop">peer study group</a></li>
+      </ul>
+    </section>
+
+    <!-- PAGE 2: ABOUT -->
+    <section id="about" class="page-section">
+      <h2>About Ruchir Saxena</h2>
+      <p>I am an undergraduate student in the Faculty of Computer Applications at Invertis University, Bareilly. I enjoy solving algorithmic problems in Java and building clean interfaces with HTML and CSS.</p>
+      <table border="1" cellpadding="6" cellspacing="0">
+        <caption><strong>Student Quick Facts</strong></caption>
+        <tr>
+          <th scope="row">Location</th>
+          <td>Bareilly, Uttar Pradesh, India</td>
+        </tr>
+        <tr>
+          <th scope="row">University</th>
+          <td>Invertis University</td>
+        </tr>
+        <tr>
+          <th scope="row">Degree</th>
+          <td>BCA (Artificial Intelligence), 2026–2029</td>
+        </tr>
+        <tr>
+          <th scope="row">Primary Stack</th>
+          <td>HTML5, CSS3, Java, Git, PowerShell</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- PAGE 3: ACADEMICS -->
+    <section id="academics" class="page-section">
+      <h2>Curriculum: BCA (Artificial Intelligence)</h2>
+      <p>Our program spans 6 semesters and 155 credits, designed to blend solid computer science principles with practical machine learning.</p>
+      <ol>
+        <li><strong>BCAICC104:</strong> HTML &amp; CSS (Theory &amp; Lab)</li>
+        <li><strong>BCAICC103:</strong> Programming In JAVA (Theory &amp; Lab)</li>
+        <li><strong>BCAICC102:</strong> Theory of Mathematics</li>
+        <li><strong>IIOT1AC:</strong> Data Analytics</li>
+        <li><strong>EPC001:</strong> AI-Based English Proficiency</li>
+      </ol>
+      <p>Official Portal: <a href="https://www.invertisuniversity.ac.in/" target="_blank" rel="noopener noreferrer">Invertis University Website</a></p>
+    </section>
+
+    <!-- PAGE 4: WORKSHOP REGISTRATION -->
+    <section id="workshop" class="page-section">
+      <h2>Student Workshop Registration</h2>
+      <p>Join our weekly peer coding sprint on campus.</p>
+      <form action="#" method="post">
+        <p>
+          <label>Student Name:<br><input type="text" name="student_name" required></label>
+        </p>
+        <p>
+          <label>Email Address:<br><input type="email" name="student_email" required></label>
+        </p>
+        <p>
+          <label>Preferred Topic:<br>
+            <select name="study_topic">
+              <option>HTML &amp; CSS Lab Projects</option>
+              <option>Java OOP Practice</option>
+              <option>Git &amp; GitHub Setup</option>
+            </select>
+          </label>
+        </p>
+        <p><button type="submit">Register for Session</button></p>
+      </form>
+    </section>
+
+    <!-- PAGE 5: CONTACT -->
+    <section id="contact" class="page-section">
+      <h2>Contact Me</h2>
+      <p>I welcome feedback, collaboration ideas, and questions regarding our coursework.</p>
+      <form action="mailto:saxenaruchir282@gmail.com" method="post" enctype="text/plain">
+        <p>
+          <label>Your Name:<br><input type="text" name="sender_name" required></label>
+        </p>
+        <p>
+          <label>Your Message:<br><textarea name="sender_message" rows="4" cols="45" required></textarea></label>
+        </p>
+        <p><button type="submit">Send Message</button></p>
+      </form>
+      <address>
+        Bareilly, Uttar Pradesh · Email: <a href="mailto:saxenaruchir282@gmail.com">saxenaruchir282@gmail.com</a>
+      </address>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <p><small>&copy; 2026 Ruchir Saxena · Invertis University, Bareilly · <a href="#home">Back to Home</a></small></p>
+  </footer>
+</body>
+
+</html>

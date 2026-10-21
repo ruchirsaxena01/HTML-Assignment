@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSS Grid Photo Gallery with Asymmetric Spans – Ruchir Saxena">
+  <title>CSS Grid Photo Gallery – Ruchir Saxena</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #38bdf8;
+    }
+
+    /* CSS Grid Gallery */
+    .grid-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-auto-rows: 200px;
+      gap: 1rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Asymmetric Spans */
+    .span-col-2 {
+      grid-column: span 2;
+    }
+
+    .span-row-2 {
+      grid-row: span 2;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
+      padding: 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .span-col-2 {
+        grid-column: span 1;
+      }
+      .span-row-2 {
+        grid-row: span 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Campus &amp; Technology Grid Gallery</h1>
+      <p>Demonstrating 2-dimensional CSS Grid with column and row spans · <strong>Ruchir Saxena</strong></p>
+    </header>
+
+    <main class="grid-gallery">
+      <!-- Item 1: Large Featured (2x2) -->
+      <div class="gallery-item span-col-2 span-row-2">
+        <img src="https://picsum.photos/id/1018/600/600" alt="Mountain valley landscape">
+        <div class="caption">University Academic Expedition</div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/0/400/300" alt="MacBook with source code">
+        <div class="caption">Web Dev Sprint</div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/60/400/300" alt="Coding desk setup">
+        <div class="caption">Java Problem Solving</div>
+      </div>
+
+      <!-- Item 4: Wide Span (2 cols) -->
+      <div class="gallery-item span-col-2">
+        <img src="https://picsum.photos/id/180/600/300" alt="Laptop and coffee">
+        <div class="caption">Weekend Project Jam</div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/119/400/300" alt="Notebook and stationery">
+        <div class="caption">Algorithms &amp; Math</div>
+      </div>
+    </main>
+
+    <footer style="margin-top: 2rem; text-align: center; color: #64748b; font-size: 0.85rem;">
+      <p>&copy; 2026 Ruchir Saxena · Invertis University, Bareilly</p>
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Campus Brew Cafe &amp; Bakery – Finished Fully Responsive Landing Page – Ruchir Saxena">
+  <title>Campus Brew Cafe &amp; Bakery – Responsive Landing Page</title>
+  <style>
+    :root {
+      --warm-cream: #fdfbf7;
+      --deep-roast: #3e2723;
+      --warm-amber: #d97706;
+      --olive-sage: #4d7c0f;
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--warm-cream);
+      color: var(--deep-roast);
+      line-height: 1.65;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== HEADER / RESPONSIVE NAV ===== */
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid #f2ece4;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 0;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--deep-roast);
+    }
+
+    .logo span {
+      color: var(--warm-amber);
+    }
+
+    /* CSS Hamburger Checkbox Hack */
+    #menu-toggle {
+      display: none;
+    }
+
+    .hamburger-label {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .hamburger-label span {
+      display: block;
+      width: 24px;
+      height: 3px;
+      background: var(--deep-roast);
+      border-radius: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      font-family: system-ui, sans-serif;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--warm-amber);
+    }
+
+    .btn-order {
+      background: var(--warm-amber);
+      color: #ffffff;
+      padding: 0.65rem 1.5rem;
+      border-radius: 999px;
+      font-family: system-ui, sans-serif;
+      font-weight: 700;
+      transition: background-color 0.2s;
+    }
+
+    .btn-order:hover {
+      background: #b45309;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 3.5rem;
+      padding: 4.5rem 0;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-text p {
+      font-size: 1.15rem;
+      color: #6d5b52;
+      margin-bottom: 2rem;
+    }
+
+    .hero-img {
+      flex: 1;
+    }
+
+    .hero-img img {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 24px rgba(62, 39, 35, 0.12);
+      display: block;
+    }
+
+    /* ===== SPECIALS SECTION ===== */
+    .specials {
+      padding: 4.5rem 0;
+      background: #ffffff;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title p {
+      font-family: system-ui, sans-serif;
+      color: #78716c;
+    }
+
+    .specials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .special-card {
+      background: var(--warm-cream);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid #ebd9ca;
+      text-align: center;
+      padding-bottom: 1.5rem;
+      transition: transform 0.2s;
+    }
+
+    .special-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .special-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 1.25rem;
+    }
+
+    .special-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .special-card p {
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+      color: #6d5b52;
+      padding: 0 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .special-card .price {
+      color: var(--warm-amber);
+      font-weight: 800;
+      font-size: 1.2rem;
+      font-family: system-ui, sans-serif;
+    }
+
+    /* ===== STUDENT DISCOUNT BANNER ===== */
+    .student-banner {
+      background: var(--deep-roast);
+      color: #ffffff;
+      padding: 3.5rem 0;
+      text-align: center;
+    }
+
+    .student-banner h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--warm-cream);
+    }
+
+    .student-banner p {
+      font-family: system-ui, sans-serif;
+      font-size: 1.05rem;
+      color: #d7ccc8;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #251614;
+      color: #a89f91;
+      padding: 3rem 0;
+      text-align: center;
+      font-family: system-ui, sans-serif;
+      font-size: 0.85rem;
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    /* ===== RESPONSIVE MEDIA QUERIES ===== */
+    @media (max-width: 768px) {
+      .hamburger-label {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+        gap: 1rem;
+      }
+
+      #menu-toggle:checked ~ .nav-links {
+        display: flex;
+      }
+
+      .btn-order-desktop {
+        display: none;
+      }
+
+      .hero {
+        flex-direction: column;
+        padding: 2.5rem 0;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 2.25rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-text h1 {
+        font-size: 1.85rem;
+      }
+
+      .btn-order {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrap header-nav">
+      <div class="logo">Campus<span>Brew</span></div>
+
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger-label" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Specialties</a></li>
+        <li><a href="#location">Visit Us</a></li>
+      </ul>
+
+      <a href="#menu" class="btn-order btn-order-desktop">Order Ahead</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div class="hero-text">
+        <h1>Artisan Roasts &amp; Fresh Bakes for Campus Minds</h1>
+        <p>Located right near Invertis University on Bareilly Highway. Freshly roasted artisan coffees, gourmet sandwiches, and quiet study booths equipped with fast Wi-Fi.</p>
+        <a href="#menu" class="btn-order">Browse Morning Menu</a>
+      </div>
+      <div class="hero-img">
+        <img src="https://picsum.photos/id/1060/600/400" alt="Fresh artisan coffee and pastry">
+      </div>
+    </section>
+
+    <section id="menu" class="specials">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Student Favorites</h2>
+          <p>Hand-crafted daily with locally sourced ingredients.</p>
+        </div>
+
+        <div class="specials-grid">
+          <div class="special-card">
+            <img src="https://picsum.photos/id/30/400/250" alt="Cappuccino mug with latte art">
+            <h3>Classic Velvet Latte</h3>
+            <p>Espresso paired with silky steamed micro-foam.</p>
+            <div class="price">₹140</div>
+          </div>
+
+          <div class="special-card">
+            <img src="https://picsum.photos/id/42/400/250" alt="Fresh croissants and butter">
+            <h3>Butter Croissant</h3>
+            <p>Flaky, buttery baked fresh every morning.</p>
+            <div class="price">₹95</div>
+          </div>
+
+          <div class="special-card">
+            <img src="https://picsum.photos/id/1080/400/250" alt="Berry tartlet">
+            <h3>Berry Tartlet</h3>
+            <p>Seasonal berries over Madagascar cream.</p>
+            <div class="price">₹120</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="student-banner">
+      <div class="wrap">
+        <h2>15% Off with Invertis University Student ID</h2>
+        <p>Show your college ID card during checkout on all beverage and bakery orders.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Campus Brew Cafe &amp; Bakery · NH-24 Bareilly, Uttar Pradesh</p>
+      <p>&copy; 2026 Designed for Lab Coursework by Ruchir Saxena · Invertis University</p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resume with Custom Typography and Color Palette – Ruchir Saxena">
+  <title>Resume – Ruchir Saxena (Palette &amp; Fonts)</title>
+  <style>
+    /* Cohesive Palette: Deep Navy (#1a365d), Ocean (#2b6cb0), Teal (#319795), Soft Slate (#f7fafc) */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      background: #edf2f7;
+      color: #2d3748;
+      margin: 0;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 740px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+      color: #ffffff;
+      padding: 2rem 2.5rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin: 0.35rem 0 0.75rem;
+      color: #cbd5e0;
+      font-size: 1.05rem;
+    }
+
+    header address {
+      font-style: normal;
+      font-size: 0.9rem;
+      color: #e2e8f0;
+    }
+
+    header a {
+      color: #81e6d9;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 2rem 2.5rem;
+    }
+
+    h2 {
+      color: #1a365d;
+      font-size: 1.25rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.4rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    main h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .edu-card {
+      border-left: 3px solid #319795;
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .edu-card h3 {
+      margin: 0;
+      font-size: 1.05rem;
+      color: #2d3748;
+    }
+
+    .edu-card .meta {
+      font-size: 0.85rem;
+      color: #718096;
+      margin: 0.15rem 0 0.4rem;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.75rem 0;
+    }
+
+    .skill-tag {
+      background: #e6fffa;
+      color: #234e52;
+      border: 1px solid #b2f5ea;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    footer {
+      background: #f7fafc;
+      border-top: 1px solid #e2e8f0;
+      text-align: center;
+      padding: 1rem;
+      color: #718096;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Ruchir Saxena</h1>
+      <p>BCA (Artificial Intelligence) · Front-End &amp; Java Developer</p>
+      <address>
+        Bareilly, Uttar Pradesh · <a href="mailto:saxenaruchir282@gmail.com">saxenaruchir282@gmail.com</a> · GitHub: <a href="https://github.com/ruchirsaxena01" target="_blank" rel="noopener noreferrer">ruchirsaxena01</a>
+      </address>
+    </header>
+
+    <main>
+      <section>
+        <h2>About Me</h2>
+        <p>Motivated first-year BCA student specializing in Artificial Intelligence at Invertis University, Bareilly. Eager to apply structured <strong>Java</strong> algorithms and clean <strong>HTML5/CSS3</strong> practices toward responsive web applications.</p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="edu-card">
+          <h3>Bachelor of Computer Applications (AI)</h3>
+          <div class="meta">Invertis University, Bareilly · 2026 – 2029 (Semester I)</div>
+          <p>Key subjects: HTML &amp; CSS, Programming in Java, Data Analytics, Discrete Mathematics.</p>
+        </div>
+
+        <div class="edu-card">
+          <h3>Senior Secondary Certificate (Class XII)</h3>
+          <div class="meta">Completed 2025 · Science Stream · 82%</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Technical Stack</h2>
+        <div class="skills-grid">
+          <span class="skill-tag">HTML5 Semantics</span>
+          <span class="skill-tag">CSS3 Flexbox</span>
+          <span class="skill-tag">CSS Grid</span>
+          <span class="skill-tag">Java OOP</span>
+          <span class="skill-tag">Git &amp; GitHub</span>
+          <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">PowerShell</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Ruchir Saxena · Faculty of Computer Applications · Invertis University</p>
+    </footer>
+  </div>
+</body>
+
+</html>

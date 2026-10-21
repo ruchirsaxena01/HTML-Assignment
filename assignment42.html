@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive Design Audit and Mobile Fixes – Ruchir Saxena">
+  <title>Responsive Audit &amp; Fixes – Ruchir Saxena</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      background: #f8fafc;
+      color: #1e293b;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      color: #0f172a;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .audit-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tag-fail {
+      background: #fee2e2;
+      color: #991b1b;
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .tag-pass {
+      background: #dcfce7;
+      color: #166534;
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    /* Responsive image standard */
+    img.responsive-img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Mobile Responsiveness Audit &amp; Fixes</h1>
+    <p>Documented by <strong>Ruchir Saxena</strong> · Invertis University, Bareilly</p>
+  </header>
+
+  <main>
+    <section class="audit-card">
+      <h2>Issue 1: Hardcoded Element Widths</h2>
+      <p><span class="tag-fail">DEFECT</span> Fixed widths like <code>width: 900px;</code> cause severe horizontal scroll on mobile devices.</p>
+      <p><span class="tag-pass">FIX</span> Replaced with <code>max-width: 900px; width: 100%; margin: 0 auto;</code> allowing fluid contraction.</p>
+    </section>
+
+    <section class="audit-card">
+      <h2>Issue 2: Unconstrained Media / Images</h2>
+      <p><span class="tag-fail">DEFECT</span> Images without fluid styling overflow their parent columns.</p>
+      <p><span class="tag-pass">FIX</span> Enforced the standard rule: <code>img { max-width: 100%; height: auto; }</code>.</p>
+      <div style="margin-top: 1rem; max-width: 320px; border: 2px dashed #cbd5e1; padding: 0.5rem;">
+        <img src="https://picsum.photos/id/180/600/300" alt="Responsive workstation" class="responsive-img">
+      </div>
+    </section>
+
+    <section class="audit-card">
+      <h2>Issue 3: Desktop Viewport Meta Tag Absence</h2>
+      <p><span class="tag-fail">DEFECT</span> Without <code>&lt;meta name="viewport"&gt;</code>, mobile browsers render desktop-sized pages at 980px zoom.</p>
+      <p><span class="tag-pass">FIX</span> Included <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code> on every document.</p>
+    </section>
+  </main>
+
+  <footer style="text-align: center; color: #94a3b8; font-size: 0.85rem;">
+    <p>&copy; 2026 Ruchir Saxena · Invertis University, Bareilly</p>
+  </footer>
+</body>
+
+</html>

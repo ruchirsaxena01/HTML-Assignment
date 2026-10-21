@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Grid Layout with Header, Sidebar Filter and Products Grid – Ruchir Saxena">
+  <title>Study Portal – Header, Sidebar &amp; Product Grid</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.5;
+    }
+
+    /* Page Grid Layout */
+    .portal-page {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+    }
+
+    header.portal-header {
+      background: #1e3a8a;
+      color: #ffffff;
+      padding: 1.25rem 2rem;
+    }
+
+    .portal-main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 2rem;
+      width: 100%;
+    }
+
+    /* Sidebar */
+    .filter-sidebar {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      height: fit-content;
+    }
+
+    .filter-sidebar h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #0f172a;
+    }
+
+    .filter-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .filter-group label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Products Grid */
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product-item {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-info h4 {
+      margin-bottom: 0.35rem;
+    }
+
+    .product-info p {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-bottom: 0.75rem;
+      flex-grow: 1;
+    }
+
+    .btn-download {
+      background: #2563eb;
+      color: #ffffff;
+      text-align: center;
+      padding: 0.45rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    footer.portal-footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .portal-main {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="portal-page">
+    <header class="portal-header">
+      <h1>Invertis BCA (AI) Resource Store</h1>
+      <p>Curated by Ruchir Saxena · Semester I</p>
+    </header>
+
+    <div class="portal-main">
+      <aside class="filter-sidebar">
+        <h3>Filter Coursework</h3>
+        <div class="filter-group">
+          <strong>Category</strong>
+          <label><input type="checkbox" checked> Web Development</label>
+          <label><input type="checkbox" checked> Java Programming</label>
+          <label><input type="checkbox"> Mathematics</label>
+          <label><input type="checkbox"> Analytics</label>
+        </div>
+        <div class="filter-group">
+          <strong>Resource Type</strong>
+          <label><input type="radio" name="res" checked> All Types</label>
+          <label><input type="radio" name="res"> Code Repos</label>
+          <label><input type="radio" name="res"> Handbooks</label>
+        </div>
+      </aside>
+
+      <main class="catalog-grid">
+        <div class="product-item">
+          <img src="https://picsum.photos/id/0/300/180" alt="Code editor">
+          <div class="product-info">
+            <h4>HTML &amp; CSS Starter</h4>
+            <p>Ready-to-use semantic boilerplate templates.</p>
+            <a href="#" class="btn-download">Get Material</a>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="https://picsum.photos/id/60/300/180" alt="Desktop setup">
+          <div class="product-info">
+            <h4>Java OOP Starter Pack</h4>
+            <p>Sample classes and OOP inheritance exercises.</p>
+            <a href="#" class="btn-download">Get Material</a>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="https://picsum.photos/id/180/300/180" alt="Laptop workstation">
+          <div class="product-info">
+            <h4>Flexbox &amp; Grid Cheatsheet</h4>
+            <p>Syntax reference cards for alignment &amp; layouts.</p>
+            <a href="#" class="btn-download">Get Material</a>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="portal-footer">
+      <p>&copy; 2026 Ruchir Saxena · Faculty of Computer Applications · Invertis University, Bareilly</p>
+    </footer>
+  </div>
+</body>
+
+</html>

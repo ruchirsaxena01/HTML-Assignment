@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete Flexbox Landing Page for Invertis AI Club – Ruchir Saxena">
+  <title>Invertis AI Club – Flexbox Landing Page</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #3b82f6;
+      --accent: #10b981;
+      --dark: #0f172a;
+      --light: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #334155;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* 1. Flex Nav */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .flex-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 0;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: #64748b;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 0.65rem 1.4rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* 2. Flex Hero */
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      padding: 4.5rem 0;
+    }
+
+    .hero-left {
+      flex: 1;
+    }
+
+    .hero-left h1 {
+      font-size: 2.75rem;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-left p {
+      font-size: 1.15rem;
+      color: #64748b;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-right {
+      flex: 1;
+    }
+
+    .hero-right img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 3. Flex Features */
+    .features-section {
+      background: var(--light);
+      padding: 4rem 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      color: var(--dark);
+    }
+
+    .features-flex {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .feature-card h3 {
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    /* 4. Flex Footer */
+    footer {
+      background: var(--dark);
+      color: #94a3b8;
+      padding: 3rem 0;
+    }
+
+    .footer-flex {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .footer-col h4 {
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero, .features-flex {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap flex-nav">
+      <div class="logo">Invertis AI Club</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Tracks</a></li>
+        <li><a href="#activities">Workshops</a></li>
+      </ul>
+      <a href="mailto:saxenaruchir282@gmail.com" class="btn">Join Society</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div class="hero-left">
+        <h1>Learn, Code &amp; Innovate with AI and Web Tech</h1>
+        <p>The student-led technical forum at Invertis University, Bareilly. Fostering practical software skills from foundational Java and HTML to cutting-edge AI models.</p>
+        <a href="#features" class="btn">Explore Domains</a>
+      </div>
+      <div class="hero-right">
+        <img src="https://picsum.photos/id/1018/600/400" alt="Campus students learning together">
+      </div>
+    </section>
+
+    <section id="features" class="features-section">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Our Core Learning Tracks</h2>
+        </div>
+
+        <div class="features-flex">
+          <div class="feature-card">
+            <h3>HTML5 &amp; CSS3 Mastery</h3>
+            <p>From semantic markup and accessible forms to complex responsive layouts using CSS Grid and Flexbox.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Java &amp; OOP Foundations</h3>
+            <p>Developing disciplined programming habits, clean architecture, and problem-solving skills in Java.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Applied Data Analytics</h3>
+            <p>Extracting practical insights from data using modern analytics tools, Python scripts, and machine learning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-flex">
+      <div class="footer-col">
+        <h4>Invertis AI Club</h4>
+        <p>Faculty of Computer Applications<br>Invertis University, Bareilly (U.P.)</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="assignment8.html" style="color: inherit; text-decoration: none;">Student Resume</a></li>
+          <li><a href="assignment13.html" style="color: inherit; text-decoration: none;">University Course Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Student Coordinator</h4>
+        <p>Ruchir Saxena · BCA (AI)<br>saxenaruchir282@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

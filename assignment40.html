@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Magazine Style Editorial Portfolio with CSS Grid – Ruchir Saxena">
+  <title>Magazine Editorial Portfolio – Ruchir Saxena</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #fafaf9;
+      color: #292524;
+      line-height: 1.6;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .wrap {
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 3px double #292524;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.75rem;
+      letter-spacing: -1px;
+      font-weight: 900;
+    }
+
+    header p {
+      font-family: system-ui, sans-serif;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      color: #78716c;
+      margin-top: 0.35rem;
+    }
+
+    /* Editorial Magazine Grid */
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+    }
+
+    .lead-story {
+      border-bottom: 1px solid #d6d3d1;
+      padding-bottom: 1.5rem;
+    }
+
+    .lead-story img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .lead-story h2 {
+      font-size: 1.85rem;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+
+    .sidebar-feed {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      border-left: 1px solid #d6d3d1;
+      padding-left: 1.5rem;
+    }
+
+    .story-item h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .story-item p {
+      font-size: 0.9rem;
+      color: #57534e;
+    }
+
+    footer {
+      border-top: 1px solid #d6d3d1;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      text-align: center;
+      font-family: system-ui, sans-serif;
+      font-size: 0.85rem;
+      color: #78716c;
+    }
+
+    @media (max-width: 768px) {
+      .editorial-grid {
+        grid-template-columns: 1fr;
+      }
+      .sidebar-feed {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid #d6d3d1;
+        padding-top: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Ruchir Saxena · Tech Chronicle</h1>
+      <p>BCA (Artificial Intelligence) · Invertis University, Bareilly</p>
+    </header>
+
+    <main class="editorial-grid">
+      <article class="lead-story">
+        <img src="https://picsum.photos/id/1018/800/400" alt="Landscape banner">
+        <h2>Developing Clean Front-End Web Architecture in Semester I</h2>
+        <p>In the first semester of the BCA (Artificial Intelligence) program at Invertis University, the foundational journey begins with writing clean, semantic HTML5 before touching any complex scripts. Mastering document outlines, accessibility tree structures, and fluid CSS grids establishes the foundation for scalable software development.</p>
+      </article>
+
+      <aside class="sidebar-feed">
+        <div class="story-item">
+          <h3>The Object-Oriented Mindset with Java</h3>
+          <p>Exploring how strong class encapsulation and inheritance simplify modular software architecture.</p>
+        </div>
+
+        <div class="story-item">
+          <h3>Why CSS Grid and Flexbox Complement Each Other</h3>
+          <p>Two-dimensional layout controls for pages, paired with one-dimensional alignment for navigation and forms.</p>
+        </div>
+
+        <div class="story-item">
+          <h3>Bareilly Campus Life &amp; Tech Clubs</h3>
+          <p>Weekly collaborative coding jams at the Faculty of Computer Applications.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Ruchir Saxena · Invertis University, Bareilly</p>
+    </footer>
+  </div>
+</body>
+
+</html>

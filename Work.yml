@@ -1,0 +1,44 @@
+CONTEXT:
+  There is a folder named Ref and a subfolder named Assignment
+  You have to use Ref folder assignment as reference
+  In root directory user Assignment exist
+  assets folder contain's images for assignment
+  Course pdf is given read it and get information about user course
+
+Work:
+  Read all *.md and *.html and make assignment in root for user
+  Use user information below
+  Make sure assignments are not same and doesn't look Ai generated
+  Change content, images and Ui a little bit but don't make it professional 
+
+User Data:
+Name: Ruchir Saxena
+Email: saxenaruchir282@gmail.com
+Skills: HTML, CSS, Java
+University-Website: https://www.invertisuniversity.ac.in/
+University-Image: https://www.invertisuniversity.ac.in/uploads/image/5662imguf_overview_identity1.webp
+
+Tree:
+PS C:\Users\ruchi\OneDrive\Desktop\CODING\HTML-Assignment> tree
+Folder PATH listing for volume ACER
+Volume serial number is 9467-634A
+C:.
+├───assets
+└───Ref
+    └───Assignment
+PS C:\Users\ruchi\OneDrive\Desktop\CODING\HTML-Assignment> ls
+
+
+    Directory: C:\Users\ruchi\OneDrive\Desktop\CODING\HTML-Assignment
+
+
+Mode                 LastWriteTime         Length Name                                                                     
+----                 -------------         ------ ----                                                                     
+dar--l        21-10-2026     10:12                assets                                                                   
+dar--l        21-10-2026     10:04                Ref                                                                      
+-a---l        21-10-2026     10:17             23 .gitignore                                                               
+-a---l        21-10-2026     09:25              0 assignment1.md                                                           
+-a---l        21-10-2026     09:39              0 assignment2.md                                                           
+-a---l        21-10-2026     10:17        1352573 course.pdf                                                               
+-a---l        21-10-2026     09:53             11 readme.md                                                                
+-a---l        21-10-2026     10:06            128 Work.yml  

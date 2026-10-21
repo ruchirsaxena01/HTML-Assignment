@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Job &amp; Internship Application Form – Front-End Developer / Java Trainee">
+  <title>Application for Front-End &amp; Java Intern</title>
+</head>
+
+<body>
+  <header>
+    <h1>Internship &amp; Placement Application Form</h1>
+    <p>Position: <strong>Junior Front-End Developer &amp; Java Trainee</strong></p>
+  </header>
+
+  <main>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <fieldset>
+        <legend>1. Personal Information</legend>
+
+        <p>
+          <label for="app-name">Full Name *</label><br>
+          <input type="text" id="app-name" name="app_name" required placeholder="Ruchir Saxena">
+        </p>
+
+        <p>
+          <label for="app-email">Email Address *</label><br>
+          <input type="email" id="app-email" name="app_email" required placeholder="saxenaruchir282@gmail.com">
+        </p>
+
+        <p>
+          <label for="app-phone">Mobile Number *</label><br>
+          <input type="tel" id="app-phone" name="app_phone" pattern="[0-9]{10}" placeholder="10-digit mobile number" required>
+        </p>
+
+        <p>
+          <label for="app-city">Current City *</label><br>
+          <input type="text" id="app-city" name="app_city" value="Bareilly, Uttar Pradesh" required>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Academic Background</legend>
+
+        <p>
+          <label for="app-college">Institution / College Name *</label><br>
+          <input type="text" id="app-college" name="app_college" value="Invertis University, Bareilly" required>
+        </p>
+
+        <p>
+          <label for="app-degree">Degree &amp; Specialization *</label><br>
+          <input type="text" id="app-degree" name="app_degree" value="BCA (Artificial Intelligence)" required>
+        </p>
+
+        <p>
+          <label for="app-year">Expected Graduation Year *</label><br>
+          <input type="number" id="app-year" name="app_year" min="2026" max="2030" value="2029" required>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. Technical Expertise &amp; Portfolio Links</legend>
+
+        <p>
+          <strong>Core Technologies:</strong><br>
+          <label><input type="checkbox" name="skill_html" checked> HTML5 (Semantic &amp; Accessible)</label><br>
+          <label><input type="checkbox" name="skill_css" checked> CSS3 (Flexbox, Grid, Responsive)</label><br>
+          <label><input type="checkbox" name="skill_java" checked> Java (Core OOP, Console Apps)</label><br>
+          <label><input type="checkbox" name="skill_git" checked> Git &amp; GitHub Version Control</label><br>
+          <label><input type="checkbox" name="skill_sql"> Relational Databases / SQL</label>
+        </p>
+
+        <p>
+          <label for="github-url">GitHub Profile URL *</label><br>
+          <input type="url" id="github-url" name="github_url" placeholder="https://github.com/ruchirsaxena01" required>
+        </p>
+
+        <p>
+          <label for="portfolio-url">Live Portfolio / Project URL</label><br>
+          <input type="url" id="portfolio-url" name="portfolio_url" placeholder="https://ruchirsaxena01.github.io/HTML-Assignment/">
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>4. Documents &amp; Availability</legend>
+
+        <p>
+          <label for="resume-file">Upload Resume (PDF format, max 2MB) *</label><br>
+          <input type="file" id="resume-file" name="resume_file" accept=".pdf" required>
+        </p>
+
+        <p>
+          <label for="start-date">Earliest Available Joining Date *</label><br>
+          <input type="date" id="start-date" name="start_date" required>
+        </p>
+
+        <p>
+          <label for="stipend">Expected Monthly Stipend (INR):</label><br>
+          <input type="range" id="stipend" name="stipend" min="5000" max="25000" step="2500" value="10000" oninput="this.nextElementSibling.value = '₹' + this.value">
+          <output>₹10000</output>
+        </p>
+
+        <p>
+          <label for="statement">Why do you want to join this role? *</label><br>
+          <textarea id="statement" name="statement" rows="4" cols="50" placeholder="Briefly describe your programming passion, project achievements, and learning goals..." required></textarea>
+        </p>
+      </fieldset>
+
+      <p>
+        <button type="submit">Submit Application</button>
+        <button type="reset">Clear Form</button>
+      </p>
+    </form>
+  </main>
+
+  <footer>
+    <hr>
+    <p><small>&copy; 2026 Campus Placement Cell · Invertis University, Bareilly</small></p>
+  </footer>
+</body>
+
+</html>

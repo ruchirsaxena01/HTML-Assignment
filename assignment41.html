@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Multi-Screen Breakpoints Showcase – Ruchir Saxena">
+  <title>Responsive Breakpoints Showcase – Ruchir Saxena</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      background: #f8fafc;
+      color: #1e293b;
+      padding: 2rem 1rem;
+    }
+
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* Dynamic Breakpoint Indicator */
+    .device-indicator {
+      text-align: center;
+      padding: 1.25rem;
+      border-radius: 8px;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* Responsive Grid */
+    .responsive-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+
+    /* Mobile: Default (< 640px) */
+    .device-indicator {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+    .device-indicator::after {
+      content: " 📱 Mobile Viewport (< 640px)";
+    }
+    .responsive-grid {
+      grid-template-columns: 1fr;
+    }
+
+    /* Tablet: (640px to 1024px) */
+    @media (min-width: 640px) {
+      .device-indicator {
+        background: #fef3c7;
+        color: #92400e;
+      }
+      .device-indicator::after {
+        content: " 💻 Tablet Viewport (640px – 1024px)";
+      }
+      .responsive-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Desktop: (> 1024px) */
+    @media (min-width: 1024px) {
+      .device-indicator {
+        background: #dcfce7;
+        color: #166534;
+      }
+      .device-indicator::after {
+        content: " 🖥️ Desktop Viewport (> 1024px)";
+      }
+      .responsive-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header style="text-align: center; margin-bottom: 1.5rem;">
+      <h1>Responsive Breakpoints Demo</h1>
+      <p>Resize your browser window to watch the layout and indicator adapt dynamically.</p>
+    </header>
+
+    <div class="device-indicator">
+      Active Breakpoint:
+    </div>
+
+    <main class="responsive-grid">
+      <div class="card">
+        <h3>BCAICC104</h3>
+        <p>HTML &amp; CSS Web Foundations and layout systems.</p>
+      </div>
+      <div class="card">
+        <h3>BCAICC103</h3>
+        <p>Programming in Java and algorithmic thinking.</p>
+      </div>
+      <div class="card">
+        <h3>IIOT1AC</h3>
+        <p>Data Analytics and practical business insights.</p>
+      </div>
+    </main>
+
+    <footer style="margin-top: 2rem; text-align: center; color: #94a3b8; font-size: 0.85rem;">
+      <p>&copy; 2026 Ruchir Saxena · Invertis University, Bareilly</p>
+    </footer>
+  </div>
+</body>
+
+</html>
