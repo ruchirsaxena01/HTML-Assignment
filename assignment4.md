@@ -1,11 +1,3 @@
-
-
-
-## Developer Profiles & Social Links
-- **Name:** Ruchir Saxena
-- **Email:** saxenaruchir282@gmail.com
-- **Phone:** +91 7417035716
-- **GitHub Repositories:** https://github.com/ruchirsaxena01?tab=repositories
-- **LinkedIn:** https://www.linkedin.com/in/ruchir-saxena-44b323423
-- **LeetCode:** https://leetcode.com/u/ruchir01/
-- **Academic Scores:** Class X: 82.0% | Class XII: 69.2%
+<h1>Assignment 04</h1>
+<h2>Submit a repository with at least three meaningful commits.</h2>
+<img src="assets/Assignment 04.png" alt="Screenshot of three commits">
